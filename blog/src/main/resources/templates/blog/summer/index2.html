@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="blog/summer/header::head-fragment"></head>
+<body >
+<div th:replace="blog/summer/header::nav-fragment"></div>
+<div th:replace="blog/summer/header::header-fragment"></div>
+
+    <div th:replace="blog/summer/blog-list::blog-list-fragment"></div>
+    <div th:replace="blog/summer/side::side-fragment"></div>
+
+<footer th:replace="blog/summer/footer::footer-fragment"></footer>
+</body>
+<script th:src="@{/blog/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/blog/plugins/search/search.js}"></script>
+</html>

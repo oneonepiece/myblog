@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<meta charset="UTF-8"> 以下meta信息是为了让其对移动设备更友好-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Title</title>
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" th:href="@{/admin/plugins/bootstrap/css/bootstrap3.3.7.min.css}"/>
+    <!-- jQuery -->
+    <script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
+    <!-- bootstrap.min.js -->
+    <script th:src="@{/admin/plugins/bootstrap/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<!--<table class="table table-striped">-->
+    <!--<caption>条纹表格布局</caption>-->
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th>学号</th>-->
+        <!--<th>姓名</th>-->
+        <!--<th>性别</th>-->
+        <!--<th>查看</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+
+    <!--<tr>-->
+        <!--<td>Tanmay</td>-->
+        <!--<td>Bangalore</td>-->
+        <!--<td>560001</td>-->
+        <!--<td>-->
+        <!--<div class="btn-group btn-group-sm">-->
+            <!--<button type="button" class="btn btn-default">按钮 1</button>-->
+        <!--</div>-->
+        <!--</td>-->
+    <!--</tr>-->
+
+    <!--</tbody>-->
+<!--</table>-->
+
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table class="table">
+                <thead>
+                <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>查看</th>
+                </tr>
+                </thead>
+
+                <tbody >
+
+                <tr th:each="info,iterStat : ${StudentList}" th:class="${iterStat.odd} ? 'warning'">
+
+                    <td th:text="${info.stuid}">未知</td>
+                    <td th:text="${info.name}">未知</td>
+                    <td>未知</td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <button type="button" class="btn btn-default">查看</button>
+                        </div>
+                    </td>
+                </tr >
+
+                </tbody>
+            </table>
+
+            <ul class="pagination">
+                <li>
+                    <a href="#">Prev</a>
+                </li>
+                <li>
+                    <a href="/api/respjson">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a >..</a>
+                </li>
+                <li>
+                    <a href="#">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" th:href="@{/admin/plugins/bootstrap/css/bootstrap3.3.7.min.css}"/>
+    <!-- jQuery -->
+    <script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
+    <!-- bootstrap.min.js -->
+    <script th:src="@{/admin/plugins/bootstrap/js/bootstrap.min.js}"></script>
+    <!-- demojpagedatasource.js -->
+    <script th:src="@{/blog/amaze/js/demojpagetest.js}"></script>
+
+</head>
+<body>
+
+<div class="templatemo-content col-1 light-gray-bg">
+    <div class="templatemo-top-nav-container">
+        <div class="row">
+            <nav class="templatemo-top-nav col-lg-12 col-md-12">
+                <li>
+                    <a href="">发起项目列表管理</a>
+                </li>
+            </nav>
+        </div>
+    </div>
+    <!--正文部分-->
+    <div style="background: #E8E8E8;height: 60rem;">
+
+        <div class="templatemo-content-container">
+            <div class="templatemo-content-widget no-padding">
+                <!--表头-->
+                <div class="panel-heading templatemo-position-relative">
+                    <h2 class="text-uppercase">发起项目列表</h2></div>
+                <div class="panel panel-default table-responsive" id="mainContent">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination-wrap" id="callBackPager">
+    </div>
+
+    <!--<footer class="text-right">-->
+        <!--<p>Copyright &copy; 2018 Company Name | Designed by-->
+            <!--<a href="http://www.csdn.com" target="_parent">csdn</a>-->
+        <!--</p>-->
+    <!--</footer>-->
+
+    <script >
+        /*将数据取出来*/
+    function data(curr, limit) {
+//console.log("tot:"+totalCount)
+        /*拿到总数据*/
+        totalCount = testboke.data.total; //取出来的是数据总量
+        dataLIst = testboke.data.records; // 将数据放到一个数组里面（dataLIst 还未声明，莫着急）
+        createTable(curr, limit, totalCount);
+        console.log("tot:"+totalCount)
+    }
+
+        var currPage = 1;
+        var totalCount;
+        var dataLIst = [];
+        window.onload = function() {
+            /*取到总条数*/
+            /*每页显示多少条  10条*/
+            var limit = 10;
+            data(currPage, limit)
+            //console.log(totalCount)
+            createTable(1, limit, totalCount);
+            $('#callBackPager').extendPagination({
+                totalCount: totalCount,
+                limit: limit,
+                callback: function(curr, limit, totalCount) {
+                    data(curr, limit)
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

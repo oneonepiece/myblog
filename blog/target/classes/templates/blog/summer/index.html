@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<!--/webproject/css/bootstrap.min.css
+		/webproject/jquery/3.0.0/
+		/webproject/bootstrap/4.3.1/-->
+		<!--   th:href="@{/blog/amaze/css/base.css}"  -->
+		<!--  Bootstrap 核心 CSS 文件 v3.3.5 -->
+		<link rel="stylesheet" th:href="@{/blog/summer/plugins/bootstrap/css/bootstrap.min.css }" />
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" th:href="@{/blog/summer/plugins/bootstrap/css/bootstrap-theme.min.css }" />
+
+		<link rel="stylesheet" th:href="@{/blog/summer/dist/css/index.css }"  />
+
+		<!-- 聊天室的依赖 -->
+		<link rel="stylesheet" th:href="@{/blog/summer/dist/css/font-awesome.min.css }"  />
+		<!-- Ionicons -->
+		<link rel="stylesheet" th:href="@{/blog/summer/dist/css/ionicons.min.css }"  />
+		<!-- Theme style -->
+		<link rel="stylesheet" th:href="@{/blog/summer/dist/css/AdminLTE.min.css }"  />
+		<!-- AdminLTE Skins. Choose a skin from the css/skins
+		       folder instead of downloading all of them to reduce the load. -->
+		<link rel="stylesheet" th:href="@{/blog/summer/dist/css/_all-skins.min.css }"  />
+		<!--
+		  	作者：offline
+		  	时间：2019-07-19
+		  	描述：end 聊天室的依赖
+		  -->
+
+	</head>
+
+	<body>
+
+		<!--第一块-->
+		<div class="container navbar-fixed-top">
+			<nav class="navbar navbar-default  " role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+					<a class="navbar-brand">LOGO</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav ">
+
+						<li class="ml-5">
+
+						</li>
+
+						<li class="active ">
+							<a href="/index">首页</a>
+						</li>
+						<li>
+							<a href="#">读书</a>
+						</li>
+
+						</form>
+
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
+						<li>
+							<form class="navbar-form " role="search" method="get" onsubmit="return false;" accept-charset="utf-8">
+								<div class="form-group">
+									<input type="text" class="form-control" name="keyword"  id="searchbox" placeholder="输入关键字搜索" />
+									<!--<input type="text" name="keyword" id="searchbox" placeholder="输入关键字搜索">-->
+									<!--<button type="submit" class="search-submit" onclick="search()"></button>-->
+									<button type="submit" class="btn btn-default" onclick="search()" >搜索</button>
+								</div>
+							</form>
+
+
+						</li>
+						<!--<li>-->
+							<!--<form method="get" onsubmit="return false;" accept-charset="utf-8">-->
+								<!--<div class="search-input">-->
+									<!--<input type="text" name="keyword" id="searchbox" placeholder="输入关键字搜索">-->
+									<!--<button type="submit" class="search-submit" onclick="search()"></button>-->
+								<!--<div>-->
+							<!--</form>-->
+						<!--</li>-->
+						<li>
+							<a href="#">关于</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">登录<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+
+			</nav>
+
+		</div>
+
+		<!--第二块-->
+		<div class="container ">
+			<div class="row clearfix ">
+
+				<div class="col-md-12 column " style="margin-top: 80px;">
+
+					<!--轮播图-->
+					<div class="carousel slide " id="carousel-190524">
+						<ol class="carousel-indicators">
+							<li data-slide-to="0" data-target="#carousel-190524">
+							</li>
+							<li data-slide-to="1" data-target="#carousel-190524">
+							</li>
+							<li data-slide-to="2" data-target="#carousel-190524" class="active">
+							</li>
+						</ol>
+						<div class="carousel-inner ">
+							<div class="item ">
+								<img  th:src="@{/blog/summer/dist/img/default1.jpg }" alt="轮播图" />
+								<div class="carousel-caption">
+									<h4>
+								First Thumbnail label
+							</h4>
+									<p>
+										Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+									</p>
+								</div>
+							</div>
+							<div class="item">
+								<img alt="" th:src="@{/blog/summer/dist/img/default2.jpg }" />
+								<div class="carousel-caption">
+									<h4>
+								Second Thumbnail label
+							</h4>
+									<p>
+										Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+									</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img alt="" th:src="@{/blog/summer/dist/img/default3.jpg }" />
+								<div class="carousel-caption">
+									<h4>
+								Third Thumbnail label
+							</h4>
+									<p>
+										Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+									</p>
+								</div>
+							</div>
+						</div>
+						<a class="left carousel-control" href="#carousel-190524" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+						<a class="right carousel-control" href="#carousel-190524" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row clearfix " style="margin-top: 30px;">
+				<div class="col-md-2 column">
+					<!--分类列表-->
+					<div class="list-group">
+						<a href="/index"  th:class="${thisCategory == 0}?'list-group-item active' : 'list-group-item '">
+							全部
+						</a>
+						<th:block th:if="${null != categoryCount}">
+							<th:block th:each="sort : ${categoryCount}">
+								<a rel="tag" th:href="@{'/search/' + ${sort.categoryName}}" th:class="${thisCategory == sort.categoryId}?'list-group-item active' : 'list-group-item'"  >
+									<th:block th:text="${sort.categoryName}"></th:block>
+									<!--<span class="badge ">14</span>-->
+								</a>
+							</th:block>
+						</th:block>
+
+					</div>
+
+					<!--热么标签列表-->
+					<div class="list-group">
+						<!--
+                        	作者：offline
+                        	时间：2019-07-17
+                        	描述：加disabled可以禁用条目
+                        -->
+						<a class="list-group-item  list-group-item-success " style="cursor: default;">
+							热门标签:
+						</a>
+
+						<th:block th:if="${null != hotTags}">
+							<th:block th:each="hotTag : ${hotTags}">
+
+								<a rel="tag" th:href="@{'/tag/' + ${hotTag.tagName}}" class="list-group-item ">
+									<th:block th:text="${hotTag.tagName}"></th:block>
+									<span class="label label-info">
+										<th:block th:text="${hotTag.tagCount}"></th:block>
+									</span>
+								</a>
+							</th:block>
+						</th:block>
+
+
+					</div>
+
+				</div>
+				<div class="col-md-6 column">
+
+					<!--文章面板-->
+					<th:block th:if="${null != blogPageResult}">
+						<th:block th:each="blog,iterStat : ${blogPageResult.list}">
+					<div class="panel panel-default" >
+						<div class="panel-body" style="padding: 3px;">
+							<div class="" style="display:flex;">
+
+								<!--style="width: 36px;height: 36px;margin-left: 10px;"   -->
+								<img th:src="@{${configurations.get('yourAvatar')}}"  alt="头像" class="img-circle mypanel-img">
+								<!--style="width:100%; height: 20px; margin-left: 5px; margin-top: auto; margin-bottom: auto; "-->
+								<div class="mypanel-body-t">
+									<!--style=" text-decoration: none; cursor: default;color: #337ab7;font-size: 16px;"-->
+									<a th:text="${configurations.get('yourName')}" >ZORO</a>
+									<!--style=" font-size: 14px; color: #C7C7C7;margin-left: 5px;"-->
+									<span class="mypanel-body-span">in</span>
+									<span style="font-size: 16px;margin-left: 5px;" th:href="@{'/category/' + ${blog.blogCategoryName}}"
+										  th:utext="${blog.blogCategoryName}" >分类</span>
+									<!--style=" height: 36px; font-size: 14px;color: #C7C7C7; float:right; margin-right: 25px; "-->
+									<span class="mypanel-body-span-time" th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')}" >2019-07-15 发布</span>
+
+								</div>
+							</div>
+						</div>
+
+						<!--id为jQuery使用  onclick="test('index')"-->
+						<div class="panel-footer  " id="panelhrefid"  th:href="@{'/blog/' + ${blog.blogId}}" >
+
+							<!--style="display:flex; "-->
+							<div class="mycursor-type ">
+								<div style="width: 140px; height: 140px; " >
+									<!--style="display: none"-->
+									<img th:src="@{${blog.blogCoverImage}}" alt="封面" class="img-rounded img-width-140"  style="width: 140px; height: 140px; "  >
+
+								</div>
+								<div class="" style="width:100%;  margin-left: 20px; display: block;">
+
+									<a style=" text-decoration: none; color: #337ab7;font-size: 20px;"  th:text="${blog.blogTitle}" >文章标题</a> <br />
+									<div style="width: 100%; height: 65px; font-size: 15px; color:#000000;margin-top: 10px;">
+
+										<!--<span style=" font-size: 15px; color:#000000;margin-left: 5px;">文章内容文章内容文章内容你好helloworld</span>-->
+										<dd style=" font-size: 15px; color:#000000;overflow:hidden">文章内容文章内容文章内容你好helloworld文章内容文内容文章内容helloworld文章内容文</dd>
+
+									</div>
+
+									<!--<span style="font-size: 16px;margin-left: 5px;margin-top: 10px; display: block;"> 浏览量：999  回复：10</span> -->
+									<p style="font-size: 16px; margin-top: 10px; "> 浏览量：9999 &nbsp;&nbsp; 回复：999</p>
+
+									<button type="button" id="btn-minwith-hide" class="btn btn-primary " style="width: 100px;float: right; margin-right: 15px; margin-bottom: 0px; margin-top: -40px; ">点击阅读>></button>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+						</th:block>
+						</th:block>
+
+
+					<!--
+	作者：offline
+	时间：2019-07-18
+	描述：
+-->
+					<!--分页按钮-->
+					<th:block th:if="${null != blogPageResult}">
+					<ul class="pagination">
+						<!--disabled是禁用状态   active是选中状态-->
+						<li  th:class="${blogPageResult.currPage==1}?'disabled' : ' '" >
+							<a th:href="@{${blogPageResult.currPage==1}?'##':'/' + ${pageUrl} + '/' + ${blogPageResult.currPage-1}}" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<th:block th:if="${blogPageResult.totalPage>=4 && blogPageResult.currPage>=4 }" >
+							<li class="">
+								<a th:href="@{'/' + ${pageUrl} + '/' + ${blogPageResult.currPage-3}}"  th:text="${blogPageResult.currPage-3} " >
+									1
+								</a>
+							</li>
+						</th:block>
+						<!--&lt;!&ndash;如果页数大于等于3，并且总页数不少于3&ndash;&gt;-->
+						<th:block th:if="${blogPageResult.totalPage>=3 && blogPageResult.currPage>=3 }" >
+						<li class="">
+							<a th:href="@{'/' + ${pageUrl} + '/' + ${blogPageResult.currPage-2}}"  th:text="${blogPageResult.currPage-2} " >
+								1
+							</a>
+						</li>
+						</th:block>
+						<th:block th:if="${blogPageResult.totalPage>=2 && blogPageResult.currPage>=2 } ">
+						<li class="">
+							<a th:href="@{'/' + ${pageUrl} + '/' + ${blogPageResult.currPage-1}}"  th:text="${blogPageResult.currPage-1 }">
+								2
+							</a>
+						</li>
+					</th:block>
+						<li class="active">
+							<a  th:href="@{'/' + ${pageUrl} + '/' + ${blogPageResult.currPage}}"  th:text="${blogPageResult.currPage }" >
+								3
+							</a>
+						</li>
+						<!--th:if="${(blogPageResult.totalPage - blogPageResult.currPage) >=2 } "-->
+						<th:block  th:if="${(blogPageResult.totalPage - blogPageResult.currPage) >=1 }" >
+							<li class="">
+								<a th:href="@{'/' + ${pageUrl} + '/' + ${blogPageResult.currPage+1}}"  th:text="${blogPageResult.currPage+1 } " >
+								1
+							</a>
+						</li>
+						</th:block>
+						<th:block  th:if="${(blogPageResult.totalPage - blogPageResult.currPage) >=2 }" >
+							<li class="">
+								<a th:href="@{'/' + ${pageUrl} + '/' + ${blogPageResult.currPage+2}}"  th:text="${blogPageResult.currPage+2 } " >
+									1
+								</a>
+							</li>
+						</th:block>
+						<th:block  th:if="${(blogPageResult.totalPage - blogPageResult.currPage) >=3 }" >
+							<li class="">
+								<a th:href="@{'/' + ${pageUrl} + '/' + ${blogPageResult.currPage+3}}"  th:text="${blogPageResult.currPage+3 } " >
+									7
+								</a>
+							</li>
+						</th:block>
+						<li th:class="${blogPageResult.currPage==blogPageResult.totalPage}?'disabled' : ''" >
+							<a  th:href="@{${blogPageResult.currPage==blogPageResult.totalPage}?'##' : '/' + ${pageUrl} + '/' + ${blogPageResult.currPage+1}}" aria-label="Previous">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+					</th:block>
+					<!--end 分页按钮-->
+
+				</div>
+
+				<div class="col-md-4 column">
+
+					<!-- DIRECT CHAT PRIMARY 聊天室 -->
+					<div class="box box-primary direct-chat direct-chat-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">1号聊天室</h3>
+
+							<div class="box-tools pull-right">
+								<span data-toggle="tooltip" title="3 New Messages" class="badge bg-light-blue">3</span>
+								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+								<!--<button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">-->
+                  <!--<i class="fa fa-comments"></i></button>-->
+								<button type="button" id="disconnect" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+							</div>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body">
+							<!-- Conversations are loaded here -->
+							<div class="direct-chat-messages">
+
+
+								<!--&lt;!&ndash; Message. Default to the left &ndash;&gt;-->
+								<!--<div class="direct-chat-msg">-->
+									<!--<div class="direct-chat-info clearfix">-->
+										<!--<span class="direct-chat-name pull-left">甘先生</span>-->
+										<!--<span class="direct-chat-timestamp pull-right">2019-07-19 13:27</span>-->
+									<!--</div>-->
+									<!--&lt;!&ndash; /.direct-chat-info &ndash;&gt;-->
+									<!--<img class="direct-chat-img" th:src="@{/blog/summer/dist/img/user1-128x128.jpg }"   alt="Message User Image">-->
+									<!--&lt;!&ndash; /.direct-chat-img &ndash;&gt;-->
+									<!--<div class="direct-chat-text">-->
+										<!--砸 瓦 鲁 多 ！(the world)-->
+									<!--</div>-->
+									<!--&lt;!&ndash; /.direct-chat-text &ndash;&gt;-->
+								<!--</div>-->
+								<!--&lt;!&ndash; /.direct-chat-msg &ndash;&gt;-->
+
+								<!--&lt;!&ndash; Message to the right &ndash;&gt;-->
+								<!--<div class="direct-chat-msg right" >-->
+									<!--<div class="direct-chat-info clearfix">-->
+										<!--<span class="direct-chat-name pull-right">Monkey D.Luffy</span>-->
+										<!--<span class="direct-chat-timestamp pull-left">2019-07-19 13:29</span>-->
+									<!--</div>-->
+									<!--&lt;!&ndash; /.direct-chat-info &ndash;&gt;-->
+									<!--<img class="direct-chat-img" th:src="@{/blog/summer/dist/img/user3-128x128.jpg }"  alt="Message User Image">-->
+									<!--&lt;!&ndash; /.direct-chat-img &ndash;&gt;-->
+									<!--<div class="direct-chat-text" id="my-message-right">-->
+										<!--我不做人啦！JOJO！！！我不做人啦！JOJO！！！我不做人啦！JOJO！！！我不做人啦！JOJO！！！我不做人啦！JOJO！！！我不做人啦！JOJO！！！我不做人啦！JOJO！！！我不做人啦！JOJO！！！-->
+									<!--</div>-->
+									<!--&lt;!&ndash; /.direct-chat-text &ndash;&gt;-->
+								<!--</div>-->
+
+
+								<!-- /.direct-chat-msg -->
+							</div>
+							<!--/.direct-chat-messages-->
+
+							<!-- Contacts are loaded here -->
+							<div class="direct-chat-contacts">
+								<ul class="contacts-list">
+									<li>
+										<a href="#">
+											<img class="contacts-list-img" th:src="@{/blog/summer/dist/img/user1-128x128.jpg }" alt="User Image">
+
+											<div class="contacts-list-info">
+												<span class="contacts-list-name">
+                              Count Dracula
+                              <small class="contacts-list-date pull-right">2/28/2015</small>
+                            </span>
+												<span class="contacts-list-msg">How have you been? I was...</span>
+											</div>
+											<!-- /.contacts-list-info -->
+										</a>
+									</li>
+									<!-- End Contact Item -->
+								</ul>
+								<!-- /.contatcts-list -->
+							</div>
+							<!-- /.direct-chat-pane -->
+						</div>
+						<!-- /.box-body -->
+						<div class="box-footer">
+							<form action="#" method="post">
+								<div class="input-group">
+									<input type="text" name="message" id="my-message" placeholder="输入你要发的消息..." class="form-control">
+									<span class="input-group-btn">
+                        <button type="submit" id="message-send" class="btn btn-primary btn-flat">发送</button>
+                      </span>
+								</div>
+							</form>
+						</div>
+						<!-- /.box-footer-->
+					</div>
+					<!--/.direct-chat -->
+					<!-- end DIRECT CHAT PRIMARY 聊天室 -->
+
+				</div>
+			</div>
+
+		</div>
+
+		<!--  th:href="@{/blog/summer/plugins/bootstrap/css/bootstrap.min.css}"  -->
+
+		<!--<script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>-->
+		<!--<!-- jQuery 3  v3-->
+		<script th:src="@{/blog/summer/plugins/jquery/v3/jquery.min.js }" ></script>
+		<!--  Bootstrap 核心 JavaScript 文件 v3.3.5  依赖jQuery-->
+		<script th:src="@{/blog/summer/plugins/bootstrap/js/bootstrap.min.js }" ></script>
+
+		<!-- Slimscroll  聊天室的依赖js-->
+		<script th:src="@{/blog/summer/dist/js/jquery.slimscroll.min.js }" ></script>
+		<!-- FastClick -->
+		<script th:src="@{/blog/summer/dist/js/fastclick.js }" ></script>
+		<!-- AdminLTE App -->
+		<script th:src="@{/blog/summer/dist/js/adminlte.min.js }" ></script>
+		<!-- AdminLTE for demo purposes -->
+		<script th:src="@{/blog/summer/dist/js/demo.js }" ></script>
+		<!-- webjars↓-->
+		<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+		<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+		<script th:src="@{/blog/summer/dist/js/websocket.js }" ></script>
+		<!-- Slimscroll  end-聊天室的依赖js-->
+
+		<script th:src="@{/blog/summer/dist/js/index.js }" ></script>
+		<script th:src="@{/blog/plugins/search/search.js}"></script>
+
+		<script>
+			//当浏览器大小变化时
+			$(window).resize(function() {
+				//
+				minwith_hide();
+			});
+
+			//内容页最好只展示50个字
+
+			//dom结构加载完成
+			$(document).ready(function() {
+				// 任何需要执行的js特效 
+				minwith_hide();
+                indeximgratio();
+
+
+			});
+		</script>
+	</body>
+
+</html>
